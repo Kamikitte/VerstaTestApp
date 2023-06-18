@@ -25,8 +25,20 @@ namespace VerstaTestApp
 
 			builder.Services.AddScoped<IOrdersService, OrdersService>();
 
+			builder.Services.AddCors(options =>
+			{
+				options.AddPolicy(
+					name: "CorsPolicy",
+					policy =>
+						policy.WithOrigins("http://localhost:3000")
+						.AllowAnyMethod()
+						.AllowAnyHeader()
+						.AllowCredentials());
+			});
 
 			var app = builder.Build();
+
+			app.UseCors("CorsPolicy");
 
 			// Configure the HTTP request pipeline.
 			if (app.Environment.IsDevelopment())

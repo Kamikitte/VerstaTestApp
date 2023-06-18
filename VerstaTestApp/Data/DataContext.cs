@@ -17,7 +17,7 @@ namespace VerstaTestApp.Data
 			modelBuilder.Entity<Order>().HasData(
 				new Order
 				{
-					Id = 1,
+					Id = 5,
 					SenderCity = "Архангельск",
 					SenderAddress = "Комсомольская ул., 96",
 					RecipientCity = "Санкт-Петербург",
@@ -27,7 +27,7 @@ namespace VerstaTestApp.Data
 				},
 				new Order
 				{
-					Id= 2,
+					Id= 6,
 					SenderCity = "Нижний Новгород",
 					SenderAddress = "Пионерская ул., 180",
 					RecipientCity = "Краснодар",
@@ -37,7 +37,7 @@ namespace VerstaTestApp.Data
 				},
 				new Order
 				{
-					Id = 3,
+					Id = 7,
 					SenderCity = "Омск",
 					SenderAddress = "Фрунзе ул. 67",
 					RecipientCity = "Казань",
