@@ -16,11 +16,13 @@ namespace VerstaTestApp.Services
             _context = context;
         }
 
-		public void CreateOrder(CreateOrderModel newModel)
+		public OrderDTO CreateOrder(CreateOrderModel newModel)
 		{
 			var order = _mapper.Map<Order>(newModel);
 			_context.Orders.Add(order);
-			_context.SaveChanges();
+			_context.SaveChangesAsync();
+
+			return _mapper.Map<OrderDTO>(order);
 		}
 
 		public OrderDTO GetOrder(int id)

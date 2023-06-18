@@ -16,10 +16,10 @@ namespace VerstaTestApp.Controllers
 		}
 
 		[HttpPost]
-		public ActionResult Create(CreateOrderModel newOrder)
+		public ActionResult<OrderDTO> Create(CreateOrderModel newOrder)
 		{
-			_ordersService.CreateOrder(newOrder);
-			return Ok();
+			var order = _ordersService.CreateOrder(newOrder);
+			return Ok(order);
 		}
 
 		[HttpGet]
