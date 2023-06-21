@@ -1,6 +1,7 @@
 import React from 'react';
 import { List } from 'antd';
 
+// Форма, отображающая детали выбранного заказа
 const OrderDetails = ({ order }) => {
   return (
     <div>

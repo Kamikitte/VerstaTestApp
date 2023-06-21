@@ -4,6 +4,7 @@ import { Button, Modal, Row, Col } from 'antd';
 import OrderList from './OrderList';
 import OrderForm from './OrderForm';
 
+/// Главный компонент приложения
 const App = () => {
   const [isOrderFormVisible, setIsOrderFormVisible] = useState(false);
   const [orders, setOrders] = useState([]);
@@ -17,6 +18,7 @@ const App = () => {
           const dayjs = require('dayjs')
           const transformedOrder = {
             ...order,
+            // Представление объекта DateTimeOffset в формате Date 
             takeDate: dayjs(order.takeDate).format('DD.MM.YYYY')
           };
           return transformedOrder;
@@ -30,7 +32,7 @@ const App = () => {
     fetchOrders();
   }, []);
   
-
+  
   const handleAddOrderClick = () => {
     setIsOrderFormVisible(true);
   };

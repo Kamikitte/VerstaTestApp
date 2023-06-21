@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { List, Modal, Pagination } from 'antd';
 import OrderDetails from './OrderDetails';
 
+// Форма отображения списка заказов
 const OrderList = ({ orders }) => {
   const [selectedOrder, setSelectedOrder] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);

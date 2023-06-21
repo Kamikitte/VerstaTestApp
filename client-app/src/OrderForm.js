@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { Form, Input, Button, DatePicker, InputNumber } from 'antd';
 
+// Форма для создания нового заказа
 const OrderForm = ({ onOrderCreated }) => {
   const [form] = Form.useForm();
 
