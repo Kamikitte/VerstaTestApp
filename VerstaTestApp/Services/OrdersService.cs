@@ -5,6 +5,9 @@ using VerstaTestApp.Models;
 
 namespace VerstaTestApp.Services
 {
+	/// <summary>
+	/// Предоставляет набор методов для работы с моделями заказов.
+	/// </summary>
 	public class OrdersService : IOrdersService
 	{
 		private readonly IMapper _mapper;

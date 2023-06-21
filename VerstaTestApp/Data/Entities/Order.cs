@@ -3,6 +3,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace VerstaTestApp.Data.Entities
 {
+	/// <summary>
+	/// Сущность заказа, используемая для хранении в базе данных.
+	/// </summary>
 	public class Order
 	{
 		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
